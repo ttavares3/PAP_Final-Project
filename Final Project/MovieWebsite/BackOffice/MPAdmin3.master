@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MPAdmin3.master.cs" Inherits="MPinicial" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        
+#navigationBar {
+  background:#444;
+  box-shadow:0px 1px 10px 10px #ddd;
+  height:auto;
+  text-align:center;
+  width:100%;
+}
+#navigationBar > ul > li {
+  display:inline;
+}
+#navigationBar > ul > li > a
+{
+  color:#fff;
+  display:inline-block;
+  height:60px;
+  line-height:60px;
+  margin:0px;
+  padding:0px 15px;
+  text-decoration:none;
+  transition: color 0.3s ease-in;
+}
+#navigationBar > ul > li > a:hover {
+  color:#FCD000;
+}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        &nbsp;&nbsp;&nbsp;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:ImageButton ID="ImageButton1" runat="server" Height="150px" ImageUrl="~/imagens/logo-filmes.png" Width="419px" PostBackUrl="~/PáginaInicial.aspx" />
+        <br />
+        <br />
+        <nav id="navigationBar">
+  <ul>
+    <li>
+      <a href="../PáginaInicial.aspx" class="link">Home</a>
+    </li>
+    <li>
+      <a href="/FrontOffice/Filmes.aspx" class="link">Filmes</a>
+    </li>
+    <li>
+      <a href="/FrontOffice/Registar.aspx" class="link">Registar</a>
+    </li>
+       <li>
+      <a href="/BackOffice/LoginAdmin.aspx" class="link">Administração</a>
+    </li>
+  </ul>
+</nav>
+        <br />
+
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
